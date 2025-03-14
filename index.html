@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lasry Education</title>
+  <style>
+    /* Réinitialisation */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    /* Mode sombre */
+    body.dark {
+      background-color: #333;
+      color: #f4f4f4;
+    }
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+    header .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    nav {
+      margin: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .toggle-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .container {
+      padding: 20px;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .language {
+      display: none;
+    }
+    .language.active {
+      display: block;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        margin: 5px;
+        display: block;
+      }
+    }
+    /* Styles des boutons */
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-call {
+      background-color: #ff6600;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://static.wixstatic.com/media/a04e80_53c8f399ec0a49689ffda806b14459d9~mv2.png/v1/crop/x_0,y_541,w_3125,h_793/fill/w_560,h_142,al_c,q_85,usm_4.00_1.00_0.00,enc_avif,quality_auto/base_logo_transparent_background.png" alt="Logo Lasry Education">
+      <h1>Lasry Education</h1>
+    </div>
+    <div class="toggle-buttons">
+      <button id="toggle-dark">Mode Sombre/Clair</button>
+      <button id="toggle-lang">FR / EN</button>
+    </div>
+    <nav>
+      <a href="#" data-section="home">Accueil / Home</a>
+      <a href="#" data-section="about">À Propos / About</a>
+      <a href="#" data-section="services">Services</a>
+      <a href="#" data-section="centers">Centres</a>
+      <a href="#" data-section="contact">Contact</a>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <!-- Section Accueil / Home -->
+    <section id="home" class="section active">
+      <div class="language fr active">
+        <h2>Bienvenue chez Lasry Education</h2>
+        <p>Notre mission est d'aider les élèves du primaire au secondaire qui rencontrent des difficultés en français, anglais, mathématiques et sciences à réussir.</p>
+        <p>Nous offrons une évaluation gratuite de courte durée afin de déterminer les points forts et faibles de chaque élève, guidant ainsi nos recommandations et actions futures.</p>
+        <p><strong>Appelez dès maintenant au <a href="tel:+15145623940">+1 (514) 562-3940</a> pour planifier votre évaluation gratuite!</strong></p>
+      </div>
+      <div class="language en">
+        <h2>Welcome to Lasry Education</h2>
+        <p>Our mission is to help elementary to secondary students who face difficulties in French, English, Math, and Science to succeed.</p>
+        <p>We offer a free, short evaluation to determine each student's strengths and weaknesses, which guides our recommendations and future actions.</p>
+        <p><strong>Call now at <a href="tel:+15145623940">+1 (514) 562-3940</a> to schedule your free evaluation!</strong></p>
+      </div>
+    </section>
+    
+    <!-- Section À Propos / About -->
+    <section id="about" class="section">
+      <div class="language fr active">
+        <h2>À Propos de Nous</h2>
+        <p>Lasry Education a été créée pour offrir un soutien personnalisé aux élèves en difficulté. Nos valeurs reposent sur la bienveillance, l'excellence et l'engagement envers la réussite de chaque élève.</p>
+      </div>
+      <div class="language en">
+        <h2>About Us</h2>
+        <p>Lasry Education was established to provide personalized support to students facing challenges. Our values are based on care, excellence, and commitment to every student's success.</p>
+      </div>
+    </section>
+    
+    <!-- Section Services -->
+    <section id="services" class="section">
+      <div class="language fr active">
+        <h2>Nos Services</h2>
+        <p>Nous offrons des cours particuliers en français, anglais, mathématiques et sciences. Nos tarifs varient de 15 $/h à 22,50 $/h selon le forfait choisi.</p>
+        <p>L'évaluation gratuite permet d'obtenir une vision claire des points forts et des axes d'amélioration de l'élève, nous guidant ainsi pour établir le meilleur plan d'action.</p>
+        <p><strong>N'attendez plus et appelez-nous dès maintenant!</strong></p>
+      </div>
+      <div class="language en">
+        <h2>Our Services</h2>
+        <p>We offer tutoring in French, English, Math, and Science. Our rates range from $15/h to $22.50/h depending on the chosen package.</p>
+        <p>The free evaluation provides a clear overview of each student's strengths and areas for improvement, guiding us to create the best action plan.</p>
+        <p><strong>Don't wait – call us now!</strong></p>
+      </div>
+    </section>
+    
+    <!-- Section Centres -->
+    <section id="centers" class="section">
+      <div class="language fr active">
+        <h2>Nos Centres</h2>
+        <ul>
+          <li><strong>Laval :</strong> 123 Rue Principale, Laval, QC, Canada</li>
+          <li><strong>Anjou :</strong> 456 Avenue des Écoles, Anjou, QC, Canada</li>
+          <li><strong>Acadie :</strong> 789 Rue Acadie, Acadie, QC, Canada</li>
+          <li><strong>West Island :</strong> 1011 Boulevard West Island, West Island, QC, Canada</li>
+        </ul>
+      </div>
+      <div class="language en">
+        <h2>Our Centers</h2>
+        <ul>
+          <li><strong>Laval:</strong> 123 Rue Principale, Laval, QC, Canada</li>
+          <li><strong>Anjou:</strong> 456 Avenue des Écoles, Anjou, QC, Canada</li>
+          <li><strong>Acadie:</strong> 789 Rue Acadie, Acadie, QC, Canada</li>
+          <li><strong>West Island:</strong> 1011 Boulevard West Island, West Island, QC, Canada</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+      <div class="language fr active">
+        <h2>Contactez-Nous</h2>
+        <p>Pour toute question ou pour planifier votre évaluation gratuite, veuillez nous appeler au <a href="tel:+15145623940">+1 (514) 562-3940</a>.</p>
+      </div>
+      <div class="language en">
+        <h2>Contact Us</h2>
+        <p>For any inquiries or to schedule your free evaluation, please call us at <a href="tel:+15145623940">+1 (514) 562-3940</a>.</p>
+      </div>
+    </section>
+  </div>
+  
+  <script>
+    // Navigation entre sections
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('.section');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('data-section');
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+      });
+    });
+    
+    // Bascule mode sombre / clair
+    const toggleDarkBtn = document.getElementById('toggle-dark');
+    toggleDarkBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+    
+    // Bascule de langue FR/EN
+    let currentLang = 'fr';
+    const toggleLangBtn = document.getElementById('toggle-lang');
+    toggleLangBtn.addEventListener('click', () => {
+      currentLang = (currentLang === 'fr') ? 'en' : 'fr';
+      document.querySelectorAll('.language.fr').forEach(el => {
+        el.classList.toggle('active', currentLang === 'fr');
+      });
+      document.querySelectorAll('.language.en').forEach(el => {
+        el.classList.toggle('active', currentLang === 'en');
+      });
+    });
+  </script>
+</body>
+</html>
